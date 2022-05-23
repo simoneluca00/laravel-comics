@@ -1,0 +1,127 @@
+@import './../variabili';
+
+header {
+
+    li {
+        align-items: center;
+
+        a {
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        span {
+            font-size: 0.7em;
+            margin-left: 2px;
+        }
+    }
+    
+
+    .header-top-text,
+    .container-nav {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .header-top-text,
+    .menu-links,
+    .container-nav,
+    li {
+        display: flex;
+    }
+
+    .header-top {
+        background-color: $active-blue;
+        padding: 5px 0;
+    
+        .header-top-text {
+            justify-content: flex-end;
+
+            li {
+                margin: 0 15px;
+
+                a,
+                span {
+                    color: $text-white;
+                }
+            }
+
+        }
+    }
+
+    nav {
+
+        .container-nav {
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                padding: 15px 0;
+                vertical-align: middle;
+    
+                img {
+                    height: 80px;
+                }
+            }
+
+            .menu-links {
+                
+                li {
+                    margin: 0 15px;
+                    padding: 46px 0;
+
+                    a {
+                        font-weight: 600;
+                        color: $text-dimgray;
+                    }
+
+                    span {
+                        color: $active-blue;
+                    }
+                }
+
+                li:not(.active){
+                    border-bottom: 5px solid transparent;
+                }
+            
+                li.active {
+                    border-bottom: 5px solid $active-blue;
+
+                    a {
+                        color: $active-blue;
+                    }
+                }
+            }
+
+            .search {
+                position: relative;
+
+                input {
+                    outline: 0;
+                    border: 0;
+                    border-bottom: 2px solid $active-blue;
+                    padding-left: 20px;
+                    padding-bottom: 5px;
+                }
+
+                input::placeholder,
+                .fa-magnifying-glass {
+                    color: $text-dimgray;
+                }
+
+                input::placeholder {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+
+                .fa-magnifying-glass {
+                    position: absolute;
+                    left: 0;
+                    bottom: 35%;
+                    font-size: 0.9em;
+                }
+            }
+        }
+        
+    }
+}
