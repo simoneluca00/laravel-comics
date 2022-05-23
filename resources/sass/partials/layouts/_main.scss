@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+main {
+    text-transform: uppercase;
+
+    #hero {
+        height: 40vh;
+        background-image: url("../images/jumbotron.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #main-container {
+        background-color: $bg-dark;
+
+        #container-comics {
+            width: 85%;
+            margin: 0 auto;
+            color: $text-white;
+    
+            .labelComic {
+                white-space: nowrap;
+                text-transform: uppercase;
+                font-family: "Bebas Neue", cursive;
+                background-color: $active-blue;
+                display: inline-block;
+                font-size: 1.6em;
+                letter-spacing: 0.03em;
+                padding: 5px 20px;
+                position: relative;
+                bottom: 20px;
+                right: 15px;
+            }
+
+            .row-products {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                width: 80%;
+                .card{
+                    width: calc((100% / 6 ) - 20px);
+                    margin: 0 10px;
+                    margin-bottom: 10px;
+                    .card-img{
+                        width: 100%;
+                        margin-bottom: 5px;
+                    }
+
+                    h5 {
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .containerBtn {
+                text-align: center;
+                padding: 25px 0;
+        
+                .loadMore {
+                  font-size: 1.2em;
+                  white-space: nowrap;
+                  text-transform: uppercase;
+                  font-family: "Bebas Neue", cursive;
+                  background-color: $active-blue;
+                  color: $text-white;
+                  outline: none;
+                  border: none;
+                  padding: 5px 40px;
+        
+                  &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                  }
+                }
+              }
+        }
+    }
+
+    .container-info {
+        background-color: $active-blue;
+        padding: 30px 0;
+        position: relative;
+        z-index: 1;
+
+        .row-info {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .info-icons {
+                display: flex;
+                align-items: center;
+    
+                img {
+                    height: 45px;
+                    margin-right: 10px;
+                }
+
+                #visa-icon {
+                    width: 60px;
+                }
+    
+                a {
+                    font-size: 0.9em;
+                    color: $text-white;
+                }
+            }
+    
+        }
+    }
+
+}

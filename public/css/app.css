@@ -1,4 +1,4 @@
-* {
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -16,92 +16,73 @@ a {
 header li {
   align-items: center;
 }
-
 header li a {
   text-transform: uppercase;
   font-size: 0.9em;
 }
-
 header li span {
   font-size: 0.7em;
   margin-left: 2px;
 }
-
 header .header-top-text,
 header .container-nav {
   width: 80%;
   margin: 0 auto;
 }
-
 header .header-top-text,
 header .menu-links,
 header .container-nav,
 header li {
   display: flex;
 }
-
 header .header-top {
   background-color: rgb(2, 130, 249);
   padding: 5px 0;
 }
-
 header .header-top .header-top-text {
   justify-content: flex-end;
 }
-
 header .header-top .header-top-text li {
   margin: 0 15px;
 }
-
 header .header-top .header-top-text li a,
 header .header-top .header-top-text li span {
   color: rgb(255, 255, 255);
 }
-
 header nav .container-nav {
   justify-content: space-between;
   align-items: center;
 }
-
 header nav .container-nav .logo {
   padding: 15px 0;
   vertical-align: middle;
 }
-
 header nav .container-nav .logo img {
   height: 80px;
 }
-
 header nav .container-nav .menu-links li {
   margin: 0 15px;
   padding: 46px 0;
 }
-
 header nav .container-nav .menu-links li a {
   font-weight: 600;
   color: rgb(85, 85, 85);
 }
-
 header nav .container-nav .menu-links li span {
   color: rgb(2, 130, 249);
 }
-
 header nav .container-nav .menu-links li:not(.active) {
   border-bottom: 5px solid transparent;
 }
-
 header nav .container-nav .menu-links li.active {
   border-bottom: 5px solid rgb(2, 130, 249);
 }
-
 header nav .container-nav .menu-links li.active a {
   color: rgb(2, 130, 249);
 }
-
 header nav .container-nav .search {
   position: relative;
 }
-
 header nav .container-nav .search input {
   outline: 0;
   border: 0;
@@ -109,35 +90,28 @@ header nav .container-nav .search input {
   padding-left: 20px;
   padding-bottom: 5px;
 }
-
 header nav .container-nav .search input::-moz-placeholder {
   color: rgb(85, 85, 85);
 }
-
 header nav .container-nav .search input:-ms-input-placeholder {
   color: rgb(85, 85, 85);
 }
-
 header nav .container-nav .search input::placeholder,
 header nav .container-nav .search .fa-magnifying-glass {
   color: rgb(85, 85, 85);
 }
-
 header nav .container-nav .search input::-moz-placeholder {
   font-size: 1.2em;
   font-weight: bold;
 }
-
 header nav .container-nav .search input:-ms-input-placeholder {
   font-size: 1.2em;
   font-weight: bold;
 }
-
 header nav .container-nav .search input::placeholder {
   font-size: 1.2em;
   font-weight: bold;
 }
-
 header nav .container-nav .search .fa-magnifying-glass {
   position: absolute;
   left: 0;
@@ -145,3 +119,98 @@ header nav .container-nav .search .fa-magnifying-glass {
   font-size: 0.9em;
 }
 
+main {
+  text-transform: uppercase;
+}
+main #hero {
+  height: 40vh;
+  background-image: url("../images/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main #main-container {
+  background-color: rgb(28, 28, 28);
+}
+main #main-container #container-comics {
+  width: 85%;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+}
+main #main-container #container-comics .labelComic {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  background-color: rgb(2, 130, 249);
+  display: inline-block;
+  font-size: 1.6em;
+  letter-spacing: 0.03em;
+  padding: 5px 20px;
+  position: relative;
+  bottom: 20px;
+  right: 15px;
+}
+main #main-container #container-comics .row-products {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80%;
+}
+main #main-container #container-comics .row-products .card {
+  width: calc(16.6666666667% - 20px);
+  margin: 0 10px;
+  margin-bottom: 10px;
+}
+main #main-container #container-comics .row-products .card .card-img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+main #main-container #container-comics .row-products .card h5 {
+  font-weight: 400;
+}
+main #main-container #container-comics .containerBtn {
+  text-align: center;
+  padding: 25px 0;
+}
+main #main-container #container-comics .containerBtn .loadMore {
+  font-size: 1.2em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  background-color: rgb(2, 130, 249);
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  padding: 5px 40px;
+}
+main #main-container #container-comics .containerBtn .loadMore:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+main .container-info {
+  background-color: rgb(2, 130, 249);
+  padding: 30px 0;
+  position: relative;
+  z-index: 1;
+}
+main .container-info .row-info {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container-info .row-info .info-icons {
+  display: flex;
+  align-items: center;
+}
+main .container-info .row-info .info-icons img {
+  height: 45px;
+  margin-right: 10px;
+}
+main .container-info .row-info .info-icons #visa-icon {
+  width: 60px;
+}
+main .container-info .row-info .info-icons a {
+  font-size: 0.9em;
+  color: rgb(255, 255, 255);
+}
