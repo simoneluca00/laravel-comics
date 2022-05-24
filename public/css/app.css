@@ -5,6 +5,10 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style-type: none;
 }
@@ -70,6 +74,7 @@ header nav .container-nav .menu-links li a {
 }
 header nav .container-nav .menu-links li span {
   color: rgb(2, 130, 249);
+  font-size: 0.9em;
 }
 header nav .container-nav .menu-links li:not(.active) {
   border-bottom: 5px solid transparent;
@@ -119,26 +124,28 @@ header nav .container-nav .search .fa-magnifying-glass {
   font-size: 0.9em;
 }
 
-main {
-  text-transform: uppercase;
-}
-main #hero {
+#hero {
   height: 40vh;
   background-image: url("../images/jumbotron.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-main #main-container {
+
+.p-relative {
+  position: relative;
+}
+
+#main-container {
   background-color: rgb(28, 28, 28);
 }
-main #main-container #container-comics {
+#main-container #container-comics {
+  text-transform: uppercase;
   width: 85%;
   margin: 0 auto;
   color: rgb(255, 255, 255);
 }
-main #main-container #container-comics .labelComic {
+#main-container #container-comics .labelComic {
   white-space: nowrap;
-  text-transform: uppercase;
   font-family: "Bebas Neue", cursive;
   background-color: rgb(2, 130, 249);
   display: inline-block;
@@ -149,29 +156,32 @@ main #main-container #container-comics .labelComic {
   bottom: 20px;
   right: 15px;
 }
-main #main-container #container-comics .row-products {
+#main-container #container-comics .row-products {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   width: 80%;
 }
-main #main-container #container-comics .row-products .card {
+#main-container #container-comics .row-products .card {
   width: calc(16.6666666667% - 20px);
   margin: 0 10px;
   margin-bottom: 10px;
 }
-main #main-container #container-comics .row-products .card .card-img {
+#main-container #container-comics .row-products .card a {
+  color: rgb(255, 255, 255);
+}
+#main-container #container-comics .row-products .card a .card-img {
   width: 100%;
   margin-bottom: 5px;
 }
-main #main-container #container-comics .row-products .card h5 {
+#main-container #container-comics .row-products .card a h5 {
   font-weight: 400;
 }
-main #main-container #container-comics .containerBtn {
+#main-container #container-comics .containerBtn {
   text-align: center;
   padding: 25px 0;
 }
-main #main-container #container-comics .containerBtn .loadMore {
+#main-container #container-comics .containerBtn .loadMore {
   font-size: 1.2em;
   white-space: nowrap;
   text-transform: uppercase;
@@ -182,37 +192,240 @@ main #main-container #container-comics .containerBtn .loadMore {
   border: none;
   padding: 5px 40px;
 }
-main #main-container #container-comics .containerBtn .loadMore:hover {
+#main-container #container-comics .containerBtn .loadMore:hover {
   cursor: pointer;
   opacity: 0.8;
 }
-main .container-info {
+
+.container-info {
   background-color: rgb(2, 130, 249);
   padding: 30px 0;
   position: relative;
   z-index: 1;
+  text-transform: uppercase;
 }
-main .container-info .row-info {
+.container-info .row-info {
   width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .container-info .row-info .info-icons {
+.container-info .row-info .info-icons {
   display: flex;
   align-items: center;
 }
-main .container-info .row-info .info-icons img {
+.container-info .row-info .info-icons img {
   height: 45px;
   margin-right: 10px;
 }
-main .container-info .row-info .info-icons #visa-icon {
+.container-info .row-info .info-icons #visa-icon {
   width: 60px;
 }
-main .container-info .row-info .info-icons a {
+.container-info .row-info .info-icons a {
   font-size: 0.9em;
   color: rgb(255, 255, 255);
+}
+
+#container-comic-global {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+}
+#container-comic-global .bg-blue {
+  background-color: rgb(2, 130, 249);
+  padding: 35px 0;
+}
+#container-comic-global .comic-cover {
+  position: absolute;
+  bottom: 35%;
+  left: 15%;
+  border: 1px solid rgb(255, 255, 255);
+}
+#container-comic-global .comic-cover p {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  background-color: #00a9d9;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding: 2px;
+}
+#container-comic-global .comic-cover .comic-type {
+  top: 0;
+  left: 0;
+}
+#container-comic-global .comic-cover .gallery-label {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#container-comic-global .row-comic-global {
+  width: 70%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+#container-comic-global .row-comic-global .comic-global {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#container-comic-global .row-comic-global .comic-global h2 {
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.03em;
+  color: #003f5e;
+}
+#container-comic-global .row-comic-global .comic-global .description-text {
+  width: 65%;
+}
+#container-comic-global .row-comic-global .comic-global .description-text h2 {
+  font-size: 2.2em;
+}
+#container-comic-global .row-comic-global .comic-global .description-text .text-green {
+  color: #a7fb9b;
+}
+#container-comic-global .row-comic-global .comic-global .description-text .text-center {
+  text-align: center;
+}
+#container-comic-global .row-comic-global .comic-global .description-text .bg-green {
+  background-color: #55ba59;
+  margin: 20px 0;
+}
+#container-comic-global .row-comic-global .comic-global .description-text .caret-down {
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+#container-comic-global .row-comic-global .comic-global .description-text .container-price {
+  display: flex;
+  align-items: center;
+}
+#container-comic-global .row-comic-global .comic-global .description-text .container-price .price-status {
+  padding: 15px;
+  border-right: 1px solid black;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+#container-comic-global .row-comic-global .comic-global .description-text .container-price .price-status .comic-price span:last-child {
+  color: rgb(255, 255, 255);
+}
+#container-comic-global .row-comic-global .comic-global .description-text .container-price .checkAvailability {
+  width: 25%;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container-comic-global .row-comic-global .comic-global .description-text p.comic-description {
+  line-height: 1.6em;
+  color: rgb(85, 85, 85);
+}
+#container-comic-global .row-comic-global .comic-global .adv {
+  text-align: end;
+}
+#container-comic-global .row-comic-global .comic-global .adv h2 {
+  font-size: 1.3em;
+}
+
+#container-comic-specs {
+  background-color: #f6f6f6;
+  padding: 25px 0;
+  border-top: 1px solid #cecccc;
+}
+#container-comic-specs .row-comic-specs {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#container-comic-specs .row-comic-specs h2 {
+  color: #003f5e;
+  font-size: 1.4em;
+  border-bottom: 1px solid #cecccc;
+  padding-bottom: 30px;
+}
+#container-comic-specs .row-comic-specs .comic-talent {
+  width: 45%;
+}
+#container-comic-specs .row-comic-specs .comic-talent .art-by,
+#container-comic-specs .row-comic-specs .comic-talent .written-by {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #cecccc;
+}
+#container-comic-specs .row-comic-specs .comic-talent .art-by .label-talent,
+#container-comic-specs .row-comic-specs .comic-talent .written-by .label-talent {
+  min-width: 20%;
+  white-space: nowrap;
+  margin-right: 30px;
+  color: #003f5e;
+}
+#container-comic-specs .row-comic-specs .comic-talent .art-by p,
+#container-comic-specs .row-comic-specs .comic-talent .written-by p {
+  font-size: 0.8em;
+  color: #61bfe6;
+}
+#container-comic-specs .row-comic-specs .comic-talent .art-by p .comma,
+#container-comic-specs .row-comic-specs .comic-talent .written-by p .comma {
+  color: #000;
+}
+#container-comic-specs .row-comic-specs .comic-specs {
+  width: 45%;
+}
+#container-comic-specs .row-comic-specs .comic-specs .sub-specs {
+  border-bottom: 1px solid #cecccc;
+  padding: 15px 0;
+}
+#container-comic-specs .row-comic-specs .comic-specs .sub-specs p {
+  display: inline-block;
+}
+#container-comic-specs .row-comic-specs .comic-specs .sub-specs p:first-child {
+  margin-right: 35px;
+  color: #003f5e;
+}
+#container-comic-specs .row-comic-specs .comic-specs .sub-specs p:nth-child(2) {
+  font-size: 0.9em;
+}
+#container-comic-specs .row-comic-specs .comic-specs .sub-specs .comic-series {
+  text-transform: uppercase;
+  color: #61bfe6;
+}
+
+.info-options {
+  background-color: #f6f6f6;
+  border-top: 1px solid #cecccc;
+}
+.info-options .row-info-options {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  border-left: 1px solid #cecccc;
+  border-right: 1px solid #cecccc;
+}
+.info-options .row-info-options .single-info-option {
+  width: 25%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-options .row-info-options .single-info-option img {
+  height: 45px;
+  filter: invert(40%);
+  -webkit-filter: invert(40%);
+}
+.info-options .row-info-options .single-info-option span {
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2em;
+  letter-spacing: 0.03em;
+  color: #b4b8b9;
+}
+.info-options .row-info-options .single-info-option:not(.single-info-option:last-child) {
+  border-right: 1px solid #cecccc;
 }
 
 .container-footer-top {

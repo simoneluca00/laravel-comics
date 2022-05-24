@@ -1,46 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-main {
-    text-transform: uppercase;
+#hero {
+    height: 40vh;
+    background-image: url("../images/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    #hero {
-        height: 40vh;
-        background-image: url("../images/jumbotron.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+.p-relative {
+    position: relative;
+}
 
-    #main-container {
-        background-color: $bg-dark;
-
-        #container-comics {
-            width: 85%;
-            margin: 0 auto;
-            color: $text-white;
+#main-container {
+    background-color: $bg-dark;
     
-            .labelComic {
-                white-space: nowrap;
-                text-transform: uppercase;
-                font-family: "Bebas Neue", cursive;
-                background-color: $active-blue;
-                display: inline-block;
-                font-size: 1.6em;
-                letter-spacing: 0.03em;
-                padding: 5px 20px;
-                position: relative;
-                bottom: 20px;
-                right: 15px;
-            }
+    #container-comics {
+        text-transform: uppercase;
+        width: 85%;
+        margin: 0 auto;
+        color: $text-white;
 
-            .row-products {
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 auto;
-                width: 80%;
-                .card{
-                    width: calc((100% / 6 ) - 20px);
-                    margin: 0 10px;
-                    margin-bottom: 10px;
+        .labelComic {
+            white-space: nowrap;
+            font-family: "Bebas Neue", cursive;
+            background-color: $active-blue;
+            display: inline-block;
+            font-size: 1.6em;
+            letter-spacing: 0.03em;
+            padding: 5px 20px;
+            position: relative;
+            bottom: 20px;
+            right: 15px;
+        }
+
+        .row-products {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            width: 80%;
+
+            .card{
+                width: calc((100% / 6 ) - 20px);
+                margin: 0 10px;
+                margin-bottom: 10px;
+
+                a {
+                    color: $text-white;
+
                     .card-img{
                         width: 100%;
                         margin-bottom: 5px;
@@ -51,64 +57,309 @@ main {
                     }
                 }
             }
-
-            .containerBtn {
-                text-align: center;
-                padding: 25px 0;
-        
-                .loadMore {
-                  font-size: 1.2em;
-                  white-space: nowrap;
-                  text-transform: uppercase;
-                  font-family: "Bebas Neue", cursive;
-                  background-color: $active-blue;
-                  color: $text-white;
-                  outline: none;
-                  border: none;
-                  padding: 5px 40px;
-        
-                  &:hover {
-                    cursor: pointer;
-                    opacity: 0.8;
-                  }
-                }
-              }
         }
-    }
 
-    .container-info {
-        background-color: $active-blue;
-        padding: 30px 0;
-        position: relative;
-        z-index: 1;
-
-        .row-info {
-            width: 80%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .containerBtn {
+            text-align: center;
+            padding: 25px 0;
     
-            .info-icons {
-                display: flex;
-                align-items: center;
+            .loadMore {
+                font-size: 1.2em;
+                white-space: nowrap;
+                text-transform: uppercase;
+                font-family: "Bebas Neue", cursive;
+                background-color: $active-blue;
+                color: $text-white;
+                outline: none;
+                border: none;
+                padding: 5px 40px;
     
-                img {
-                    height: 45px;
-                    margin-right: 10px;
-                }
-
-                #visa-icon {
-                    width: 60px;
-                }
-    
-                a {
-                    font-size: 0.9em;
-                    color: $text-white;
+                &:hover {
+                cursor: pointer;
+                opacity: 0.8;
                 }
             }
+            }
+    }
+}
+
+.container-info {
+    background-color: $active-blue;
+    padding: 30px 0;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+
+    .row-info {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .info-icons {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 45px;
+                margin-right: 10px;
+            }
+
+            #visa-icon {
+                width: 60px;
+            }
+
+            a {
+                font-size: 0.9em;
+                color: $text-white;
+            }
+        }
+
+    }
+}
+
+#container-comic-global {
+    background-color: $text-white;
+    position: relative;
+    z-index: 1;
+
+    .bg-blue {
+        background-color: $active-blue;
+        padding: 35px 0;
+    }
     
+    .comic-cover {
+        position: absolute;
+        bottom: 35%;
+        left: 15%;
+        border: 1px solid $text-white;
+
+        p {
+            position: absolute;
+            color: $text-white;
+            background-color: #00a9d9;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            padding: 2px;
+        }
+
+        .comic-type {
+            top: 0;
+            left: 0;
+        }
+
+        .gallery-label {
+            bottom: 0;
+            width: 100%;
+            text-align: center;
         }
     }
 
+    .row-comic-global {
+        width: 70%;
+        margin: 0 auto;
+        padding: 60px 0;
+
+        .comic-global {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h2 {
+                text-transform: uppercase;
+                font-family: "Bebas Neue", cursive;
+                letter-spacing: 0.03em;
+                color: #003f5e;
+            }
+
+            .description-text{
+                width: 65%;
+
+                h2 {
+                    font-size: 2.2em;
+                }
+
+                .text-green {
+                    color: #a7fb9b;
+                }
+
+                .text-center {
+                    text-align: center;
+                }
+
+                .bg-green {
+                    background-color: #55ba59;
+                    margin: 20px 0;
+                }
+
+                .caret-down {
+                    font-size: 0.8em;
+                    margin-left: 2px;
+                }
+
+                .container-price {
+                    display: flex;
+                    align-items: center;
+                    
+                    .price-status {
+                        padding: 15px;
+                        border-right: 1px solid black;
+                        width: 75%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .comic-price {
+                            span:last-child{
+                                color: $text-white
+                            }
+                        }
+                    }
+
+                    .checkAvailability {
+                        width: 25%;
+                        color: $text-white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                }
+
+                p.comic-description {
+                    line-height: 1.6em;
+                    color: $text-dimgray;
+                }
+
+            }
+
+            .adv {
+                text-align: end;
+                h2 {
+                    font-size: 1.3em;
+                }
+            }
+
+        }
+
+    }
+}
+
+#container-comic-specs {
+    background-color: #f6f6f6;
+    padding: 25px 0;
+    border-top: 1px solid #cecccc;
+
+    .row-comic-specs {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        h2 {
+            color: #003f5e;
+            font-size: 1.4em;
+            border-bottom: 1px solid #cecccc;
+            padding-bottom: 30px;
+        }
+
+        .comic-talent {
+            width: 45%;  
+            
+            .art-by,
+            .written-by {
+                display: flex;
+                align-items: center;
+                margin: 15px 0;
+                padding: 10px 0;
+                border-bottom: 1px solid #cecccc;
+
+
+                .label-talent {
+                    min-width: 20%;
+                    white-space: nowrap;
+                    margin-right: 30px;
+                    color: #003f5e;
+                }
+
+                p {
+                    font-size: 0.8em;
+                    color: #61bfe6;
+
+                    .comma {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .comic-specs {
+            width: 45%;
+
+            .sub-specs {
+                border-bottom: 1px solid #cecccc;
+                padding: 15px 0;
+
+                p {
+                    display: inline-block;
+                }
+
+                p:first-child {
+                    margin-right: 35px;
+                    color: #003f5e;
+                }
+
+                p:nth-child(2) {
+                    font-size: 0.9em;
+                }
+
+                .comic-series {
+                    text-transform: uppercase;
+                    color: #61bfe6;
+                }
+            }
+        }
+    }
+
+}
+
+.info-options {
+    background-color: #f6f6f6;
+    border-top: 1px solid #cecccc;
+
+    .row-info-options {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        border-left: 1px solid #cecccc;
+        border-right: 1px solid #cecccc;
+
+
+        .single-info-option {
+            width: 25%;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            img {
+                height: 45px;
+                filter: invert(40%);
+                -webkit-filter: invert(40%);
+            }
+            
+            span {
+                text-transform: uppercase;
+                font-family: "Bebas Neue", cursive;
+                font-size: 1.2em;
+                letter-spacing: 0.03em;
+                color: #b4b8b9;
+            }
+        }
+
+        .single-info-option:not(.single-info-option:last-child) {
+            border-right: 1px solid #cecccc;
+        }
+    }
 }

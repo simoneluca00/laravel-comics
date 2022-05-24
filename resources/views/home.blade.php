@@ -6,27 +6,7 @@
 
 {{-- contenuto dinamico del main per la pagina HOME --}}
 @section('content')
-<div id="container-comics">
-    <div class="labelComic">
-        current series
-    </div>
-    
-    <div class="row-products">
-        @foreach ( $comics as $product )
-        <div class="card">
-            <img src=" {{ $product['thumb'] }} " alt="copertina di {{$product['title']}}" class="card-img">
-            <h5>
-                {{ $product['title'] }}
-            </h5>
-        </div>
-        @endforeach
-    </div>
 
-    <div class="containerBtn">
-        <button class="loadMore">
-          load more
-        </button>
-    </div>
+<h2 style="color: #fff; padding: 30px 0; text-align: center;">Sono la Pagina Home</h2>
 
-</div>
 @endsection

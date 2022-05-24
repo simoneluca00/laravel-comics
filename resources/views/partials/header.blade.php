@@ -25,8 +25,8 @@
                     <a href="#">characters</a>
                 </li>
 
-                <li class="active">
-                    <a href="#">comics</a>
+                <li class="{{ Request::route()->getName() == 'comics' || Request::route()->getName() == 'singleComic' ? 'active' : '' }}">
+                    <a href="{{ route('comics') }}">comics</a>
                 </li>
 
                 <li>
@@ -58,8 +58,9 @@
                 </li>
 
                 <li>
-                    <a href="#">shop</a>
-                    <span> &#9660;</span>
+                    <a href="#">shop
+                        <span> &#9660;</span>
+                    </a>
                 </li>
 
             </ul>
