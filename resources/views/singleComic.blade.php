@@ -7,7 +7,7 @@
 {{-- contenuto dinamico del main per la pagina HOME --}}
 @section('content')
 
-<div id="container-comic-global" class="p-relative">
+<div id="container-comic-global">
     <div class="bg-blue p-relative">
         <div class="comic-cover p-absolute">
             <p class="comic-type text-uppercase text-small p-absolute">{{ $singoloProdotto['type'] }}</p>

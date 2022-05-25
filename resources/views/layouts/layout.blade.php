@@ -21,7 +21,7 @@
     @include('partials.header')
 
     {{-- Main --}}
-    <main>
+    <main class="p-relative">
 
         <section id="hero">
 

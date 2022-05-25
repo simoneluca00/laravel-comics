@@ -32,7 +32,7 @@
 
 </div>
 
-<div class="container-info text-uppercase p-relative">
+<div class="container-info text-uppercase">
     <div class="row-info d-flex">
         <div class="info-icons d-flex">
             <img src="{{asset('images/buy-comics-digital-comics.png')}}" alt="icona digital comics">
