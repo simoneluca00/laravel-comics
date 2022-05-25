@@ -1,35 +1,33 @@
+@import './../variabili';
+@import './../utilities/mixins';
+@import './../utilities/helpers';
+
+// fonts Bebas Neue
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .container-footer-top {
     background-image: url('../images/footer-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 50px 0;
 
     .row-footer-top {
-        width: 85%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include compileFlex (space-between, center);
+        @include centerMargin( 85% );
 
         .credits-links-footer {
 
             .footer-list {
-                display: flex;
                 color: $text-white;
     
                 .col {
-                    display: flex;
                     flex-direction: column;
     
                     h2 {
-                        text-transform: uppercase;
                         margin-bottom: 15px;
-                        font-family: 'Bebas Neue', cursive;
+                        font-family: $font-main;
                         font-size: 1.9em;
                         letter-spacing: 0.06em;
-                    }
-    
-                    ul {
-                        list-style-type: none;
                     }
     
                     li:not(li:last-child) {
@@ -48,7 +46,6 @@
                 }
     
                 .double-list {
-                    display: flex;
                     flex-direction: column;
     
                     .bottomList {
@@ -62,7 +59,6 @@
             }
 
             .footer-credits {
-                font-size: 0.9em;
                 color: $text-gray-footer;
                 margin-top: 20px;
 
@@ -74,7 +70,11 @@
 
 
         .logo-footer {
-            margin: -70px 0;
+            margin: -120px 0;
+
+            img {
+                height: 650px;
+            }
         }
     }
 }
@@ -82,15 +82,11 @@
 .container-footer-bottom {
     background-color: $bg-gray-footerBottom;
     padding: 30px 0;
-    position: relative;
     z-index: 1;
 
     .row-footer-bottom {
-        width: 85%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include compileFlex (space-between, center);
+        @include centerMargin( 85% );
 
         #btn-signUp {
             background-color: transparent;
@@ -98,7 +94,6 @@
             color: $text-white;
             padding: 10px;
             font-weight: bold;
-            text-transform: uppercase;
 
             &:hover {
                 opacity: 0.8;
@@ -106,14 +101,12 @@
             }
         }
 
-        div.socialMedia {
-            display: flex;
+        .socialMedia {
             align-items: center;
 
             h2 {
-                font-family: 'Bebas Neue', cursive;
+                font-family: $font-main;
                 color: $active-blue;
-                text-transform: uppercase;
                 margin-right: 30px;
             }
 

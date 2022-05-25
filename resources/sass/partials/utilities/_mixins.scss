@@ -1,0 +1,9 @@
+@mixin compileFlex ($justifyCont, $alignItems) {
+    justify-content: $justifyCont;
+    align-items: $alignItems;
+}
+
+@mixin centerMargin ($width) {
+    width: $width;
+    margin: 0 auto;
+}

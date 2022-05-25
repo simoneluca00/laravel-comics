@@ -1,6 +1,26 @@
+// SECTION COLOR
 $active-blue: rgb(2,130,249);
+$black: #000;
+
+// SECTION BACKGROUND
 $bg-dark: rgb(28,28,28);
-$text-gray-footer: rgb(131,146,148);
 $bg-gray-footerBottom: rgb(48,48,48);
+$bg-comic-thumb: rgb(0, 169, 217);
+$bg-comic-specs: rgb(246, 246, 246);
+
+
+// SECTION TEXT
+// colors
+$text-gray-footer: rgb(131,146,148);
 $text-white: rgb(255,255,255);
 $text-dimgray : rgb(85, 85, 85);
+$text-primary-specs: rgb(0, 63, 94);
+$text-secondary-specs: rgb(97, 191, 230);
+$text-comic-options: rgb(180, 184, 185);
+
+// SECTION BORDER
+$br-comic-specs: rgb(206, 204, 204);
+
+// SECTION FONT
+// $font-main -> fare l' @import nei singoli file
+$font-main: "Bebas Neue", cursive;

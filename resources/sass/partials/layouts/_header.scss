@@ -1,14 +1,11 @@
 @import './../variabili';
+@import './../utilities/mixins';
+@import './../utilities/helpers';
 
 header {
 
     li {
         align-items: center;
-
-        a {
-            text-transform: uppercase;
-            font-size: 0.9em;
-        }
 
         span {
             font-size: 0.7em;
@@ -19,15 +16,7 @@ header {
 
     .header-top-text,
     .container-nav {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .header-top-text,
-    .menu-links,
-    .container-nav,
-    li {
-        display: flex;
+        @include centerMargin( 80% );
     }
 
     .header-top {
@@ -52,8 +41,7 @@ header {
     nav {
 
         .container-nav {
-            justify-content: space-between;
-            align-items: center;
+            @include compileFlex(space-between, center);
 
             .logo {
                 padding: 15px 0;
@@ -77,7 +65,6 @@ header {
 
                     span {
                         color: $active-blue;
-                        font-size: 0.9em;
                     }
                 }
 
@@ -95,7 +82,6 @@ header {
             }
 
             .search {
-                position: relative;
 
                 input {
                     outline: 0;
@@ -116,10 +102,8 @@ header {
                 }
 
                 .fa-magnifying-glass {
-                    position: absolute;
                     left: 0;
                     bottom: 35%;
-                    font-size: 0.9em;
                 }
             }
         }

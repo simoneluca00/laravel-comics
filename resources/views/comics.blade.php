@@ -6,12 +6,12 @@
 
 {{-- contenuto dinamico del main per la pagina HOME --}}
 @section('content')
-<div id="container-comics">
-    <div class="labelComic">
+<div id="container-comics" class="text-uppercase">
+    <div class="labelComic p-relative">
         current series
     </div>
-    
-    <div class="row-products">
+
+    <div class="row-products d-flex">
         @foreach ( $products as $key => $product )
         <div class="card">
             <a href="{{ route('singleComic', [ 'id' => $key ]) }}">
@@ -24,39 +24,39 @@
         @endforeach
     </div>
 
-    <div class="containerBtn">
-        <button class="loadMore">
-          load more
+    <div class="containerBtn text-center">
+        <button class="loadMore text-uppercase">
+            load more
         </button>
     </div>
 
 </div>
 
-<div class="container-info">
-    <div class="row-info">
-        <div class="info-icons">
+<div class="container-info text-uppercase p-relative">
+    <div class="row-info d-flex">
+        <div class="info-icons d-flex">
             <img src="{{asset('images/buy-comics-digital-comics.png')}}" alt="icona digital comics">
-            <a href="#">digital comics</a>
+            <a href="#" class="text-small">digital comics</a>
         </div>
 
-        <div class="info-icons">
+        <div class="info-icons d-flex">
             <img src="{{asset('images/buy-comics-merchandise.png')}}" alt="icona merchandise">
-            <a href="#">dc merchandise</a>
+            <a href="#" class="text-small">dc merchandise</a>
         </div>
 
-        <div class="info-icons">
+        <div class="info-icons d-flex">
             <img src="{{asset('images/buy-comics-subscriptions.png')}}" alt="icona subscriptions">
-            <a href="#">subscription</a>
+            <a href="#" class="text-small">subscription</a>
         </div>
 
-        <div class="info-icons">
+        <div class="info-icons d-flex">
             <img src="{{asset('images/buy-comics-shop-locator.png')}}" alt="icona shop locator">
-            <a href="#">comic shop locator</a>
+            <a href="#" class="text-small">comic shop locator</a>
         </div>
 
-        <div class="info-icons">
+        <div class="info-icons d-flex">
             <img src="{{asset('images/buy-dc-power-visa.svg')}}" alt="icona power visa" id="visa-icon">
-            <a href="#">dc power visa</a>
+            <a href="#" class="text-small">dc power visa</a>
         </div>
     </div>
 </div>

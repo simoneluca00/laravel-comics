@@ -1,11 +1,11 @@
 <footer>
     <div class="container-footer-top">
-        <div class="row-footer-top">
+        <div class="row-footer-top d-flex">
             <div class="credits-links-footer">
-                <div class="footer-list">
-                    <div class="col double-list">
+                <div class="footer-list d-flex">
+                    <div class="col double-list d-flex">
                         <div>
-                            <h2>dc comics</h2>
+                            <h2 class="text-uppercase">dc comics</h2>
                             <ul>
                                 <li>
                                     <a href="#">Characters</a>
@@ -30,9 +30,9 @@
                                 </li>
                             </ul>
                         </div>
-    
+
                         <div class="bottomList">
-                            <h2>shop</h2>
+                            <h2 class="text-uppercase">shop</h2>
                             <ul>
                                 <li>
                                     <a href="#">Shop DC</a>
@@ -43,9 +43,9 @@
                             </ul>
                         </div>
                     </div>
-    
-                    <div class="col central-list">
-                        <h2>dc</h2>
+
+                    <div class="col central-list d-flex">
+                        <h2 class="text-uppercase">dc</h2>
                         <ul>
                             <li>
                                 <a href="#">Terms Of Use</a>
@@ -82,9 +82,9 @@
                             </li>
                         </ul>
                     </div>
-    
-                    <div class="col">
-                        <h2>sites</h2>
+
+                    <div class="col d-flex">
+                        <h2 class="text-uppercase">sites</h2>
                         <ul>
                             <li>
                                 <a href="#">DC</a>
@@ -105,9 +105,9 @@
                     </div>
                 </div>
 
-                <div class="footer-credits">
+                <div class="footer-credits text-small">
                     <p>
-                        All Site Content &#8482; and &#169; 2020 DC Entertainment, unless otherwise 
+                        All Site Content &#8482; and &#169; 2020 DC Entertainment, unless otherwise
                         <a href="#">noted here</a>.
                         All rights reserved. <br>
                         <a href="#">Cookies Settings</a>
@@ -123,38 +123,38 @@
         </div>
     </div>
 
-    <div class="container-footer-bottom">
-        <div class="row-footer-bottom">
-          <div>
-              <button id="btn-signUp">sign-up now!</button>
-          </div>
-  
-          <div class="socialMedia">
-              <h2>follow us</h2>
-  
-              <div class="iconSocial">
-                  <a href="/facebook">
-                      <img src="{{asset('images/footer-facebook.png')}}" alt="Facebook icon">
-                  </a>
-  
-                  <a href="/twitter">
-                      <img src="{{asset('images/footer-twitter.png')}}" alt="Twitter icon">
-                  </a>
-  
-                  <a href="/youtube">
-                      <img src="{{asset('images/footer-youtube.png')}}" alt="Youtube icon"> 
-                  </a>
-  
-                  <a href="/pinterest">
-                      <img src="{{asset('images/footer-pinterest.png')}}" alt="Pinterest icon">
-                  </a>
-  
-                  <a href="/periscope">
-                      <img src="{{asset('images/footer-periscope.png')}}" alt="Periscope icon">
-                  </a>
-              </div>
-  
-          </div>
+    <div class="container-footer-bottom p-relative">
+        <div class="row-footer-bottom d-flex">
+            <div>
+                <button id="btn-signUp" class="text-uppercase">sign-up now!</button>
+            </div>
+
+            <div class="socialMedia d-flex">
+                <h2 class="text-uppercase">follow us</h2>
+
+                <div class="iconSocial">
+                    <a href="/facebook">
+                        <img src="{{asset('images/footer-facebook.png')}}" alt="Facebook icon">
+                    </a>
+
+                    <a href="/twitter">
+                        <img src="{{asset('images/footer-twitter.png')}}" alt="Twitter icon">
+                    </a>
+
+                    <a href="/youtube">
+                        <img src="{{asset('images/footer-youtube.png')}}" alt="Youtube icon">
+                    </a>
+
+                    <a href="/pinterest">
+                        <img src="{{asset('images/footer-pinterest.png')}}" alt="Pinterest icon">
+                    </a>
+
+                    <a href="/periscope">
+                        <img src="{{asset('images/footer-periscope.png')}}" alt="Periscope icon">
+                    </a>
+                </div>
+
+            </div>
         </div>
     </div>
 </footer>

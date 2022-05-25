@@ -1,43 +1,40 @@
+@import './../variabili';
+@import './../utilities/mixins';
+@import './../utilities/helpers';
+
+// fonts Bebas Neue
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 #hero {
     height: 40vh;
+    min-height: 330px;
     background-image: url("../images/jumbotron.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.p-relative {
-    position: relative;
 }
 
 #main-container {
     background-color: $bg-dark;
     
     #container-comics {
-        text-transform: uppercase;
-        width: 85%;
-        margin: 0 auto;
+        @include centerMargin( 85% );
         color: $text-white;
 
         .labelComic {
             white-space: nowrap;
-            font-family: "Bebas Neue", cursive;
+            font-family: $font-main;
             background-color: $active-blue;
             display: inline-block;
             font-size: 1.6em;
             letter-spacing: 0.03em;
             padding: 5px 20px;
-            position: relative;
             bottom: 20px;
             right: 15px;
         }
 
         .row-products {
-            display: flex;
             flex-wrap: wrap;
-            margin: 0 auto;
-            width: 80%;
+            @include centerMargin( 80% );
 
             .card{
                 width: calc((100% / 6 ) - 20px);
@@ -60,14 +57,12 @@
         }
 
         .containerBtn {
-            text-align: center;
             padding: 25px 0;
     
             .loadMore {
                 font-size: 1.2em;
                 white-space: nowrap;
-                text-transform: uppercase;
-                font-family: "Bebas Neue", cursive;
+                font-family: $font-main;
                 background-color: $active-blue;
                 color: $text-white;
                 outline: none;
@@ -86,19 +81,13 @@
 .container-info {
     background-color: $active-blue;
     padding: 30px 0;
-    position: relative;
     z-index: 1;
-    text-transform: uppercase;
 
     .row-info {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include compileFlex (space-between, center);
+        @include centerMargin( 80% );
 
         .info-icons {
-            display: flex;
             align-items: center;
 
             img {
@@ -111,7 +100,6 @@
             }
 
             a {
-                font-size: 0.9em;
                 color: $text-white;
             }
         }
@@ -121,7 +109,6 @@
 
 #container-comic-global {
     background-color: $text-white;
-    position: relative;
     z-index: 1;
 
     .bg-blue {
@@ -130,17 +117,13 @@
     }
     
     .comic-cover {
-        position: absolute;
         bottom: 35%;
         left: 15%;
         border: 1px solid $text-white;
 
         p {
-            position: absolute;
             color: $text-white;
-            background-color: #00a9d9;
-            text-transform: uppercase;
-            font-size: 0.9em;
+            background-color: $bg-comic-thumb;
             padding: 2px;
         }
 
@@ -152,25 +135,20 @@
         .gallery-label {
             bottom: 0;
             width: 100%;
-            text-align: center;
         }
     }
 
     .row-comic-global {
-        width: 70%;
-        margin: 0 auto;
+        @include centerMargin( 70% );
         padding: 60px 0;
 
         .comic-global {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include compileFlex (space-between, center);
 
             h2 {
-                text-transform: uppercase;
-                font-family: "Bebas Neue", cursive;
+                font-family: $font-main;
                 letter-spacing: 0.03em;
-                color: #003f5e;
+                color: $text-primary-specs;
             }
 
             .description-text{
@@ -184,10 +162,6 @@
                     color: #a7fb9b;
                 }
 
-                .text-center {
-                    text-align: center;
-                }
-
                 .bg-green {
                     background-color: #55ba59;
                     margin: 20px 0;
@@ -199,14 +173,12 @@
                 }
 
                 .container-price {
-                    display: flex;
                     align-items: center;
                     
                     .price-status {
                         padding: 15px;
-                        border-right: 1px solid black;
+                        border-right: 1px solid $black;
                         width: 75%;
-                        display: flex;
                         justify-content: space-between;
 
                         .comic-price {
@@ -217,11 +189,9 @@
                     }
 
                     .checkAvailability {
+                        @include compileFlex (center, center);
                         width: 25%;
                         color: $text-white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
                     }
 
                 }
@@ -246,21 +216,19 @@
 }
 
 #container-comic-specs {
-    background-color: #f6f6f6;
-    padding: 25px 0;
-    border-top: 1px solid #cecccc;
+    background-color: $bg-comic-specs;
+    padding: 50px 0 150px 0;
+    border-top: 1px solid $br-comic-specs;
 
     .row-comic-specs {
-        width: 70%;
-        margin: 0 auto;
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        @include compileFlex (space-between, flex-start);
+        @include centerMargin( 70% );
 
         h2 {
-            color: #003f5e;
+            color: $text-primary-specs;
             font-size: 1.4em;
-            border-bottom: 1px solid #cecccc;
+            border-bottom: 1px solid $br-comic-specs;
             padding-bottom: 30px;
         }
 
@@ -273,22 +241,22 @@
                 align-items: center;
                 margin: 15px 0;
                 padding: 10px 0;
-                border-bottom: 1px solid #cecccc;
+                border-bottom: 1px solid $br-comic-specs;
 
 
                 .label-talent {
                     min-width: 20%;
                     white-space: nowrap;
                     margin-right: 30px;
-                    color: #003f5e;
+                    color: $text-primary-specs;
                 }
 
                 p {
                     font-size: 0.8em;
-                    color: #61bfe6;
+                    color: $text-secondary-specs;
 
                     .comma {
-                        color: #000;
+                        color: $black;
                     }
                 }
             }
@@ -298,7 +266,7 @@
             width: 45%;
 
             .sub-specs {
-                border-bottom: 1px solid #cecccc;
+                border-bottom: 1px solid $br-comic-specs;
                 padding: 15px 0;
 
                 p {
@@ -307,16 +275,11 @@
 
                 p:first-child {
                     margin-right: 35px;
-                    color: #003f5e;
-                }
-
-                p:nth-child(2) {
-                    font-size: 0.9em;
+                    color: $text-primary-specs;
                 }
 
                 .comic-series {
-                    text-transform: uppercase;
-                    color: #61bfe6;
+                    color: $text-secondary-specs;
                 }
             }
         }
@@ -325,23 +288,21 @@
 }
 
 .info-options {
-    background-color: #f6f6f6;
-    border-top: 1px solid #cecccc;
+    background-color: $bg-comic-specs;
+    border-top: 1px solid $br-comic-specs;
 
     .row-info-options {
-        width: 70%;
-        margin: 0 auto;
+        @include centerMargin( 70% );
         display: flex;
-        border-left: 1px solid #cecccc;
-        border-right: 1px solid #cecccc;
+        border-left: 1px solid $br-comic-specs;
+        border-right: 1px solid $br-comic-specs;
 
 
         .single-info-option {
             width: 25%;
             padding: 15px;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include compileFlex(space-between, center);
             
             img {
                 height: 45px;
@@ -350,16 +311,15 @@
             }
             
             span {
-                text-transform: uppercase;
-                font-family: "Bebas Neue", cursive;
+                font-family: $font-main;
                 font-size: 1.2em;
                 letter-spacing: 0.03em;
-                color: #b4b8b9;
+                color: $text-comic-options;
             }
         }
 
         .single-info-option:not(.single-info-option:last-child) {
-            border-right: 1px solid #cecccc;
+            border-right: 1px solid $br-comic-specs;
         }
     }
 }

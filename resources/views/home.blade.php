@@ -7,6 +7,6 @@
 {{-- contenuto dinamico del main per la pagina HOME --}}
 @section('content')
 
-<h2 style="color: #fff; padding: 30px 0; text-align: center;">Sono la Pagina Home</h2>
+<h2 style="color: #fff; padding: 30px 0;" class="text-center">Sono la Pagina Home</h2>
 
 @endsection
